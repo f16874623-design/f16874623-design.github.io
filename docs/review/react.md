@@ -12,17 +12,17 @@ This guide explains how to integrate the GPT4Free.js client into your React appl
 
 ```bash
 # Using npm
-npm install @gpt4free/g4f.dev
+npm install @gpt4free/totocraft.org
 
 # Using yarn
-yarn add @gpt4free/g4f.dev
+yarn add @gpt4free/totocraft.org
 ```
 
 ### CDN (Alternative)
 
 ```html
 <script type="module">
-  import { Client, PollinationsAI, DeepInfra } from 'https://g4f.dev/dist/js/client.js';
+  import { Client, PollinationsAI, DeepInfra } from 'https://totocraft.org/dist/js/client.js';
 </script>
 ```
 
@@ -35,7 +35,7 @@ yarn add @gpt4free/g4f.dev
 ```jsx
 // hooks/useAIClient.js
 import { useState, useCallback } from 'react';
-import { PollinationsAI, DeepInfra, Together } from '@gpt4free/g4f.dev';
+import { PollinationsAI, DeepInfra, Together } from '@gpt4free/totocraft.org';
 
 export const useAIClient = () => {
   const [client, setClient] = useState(null);

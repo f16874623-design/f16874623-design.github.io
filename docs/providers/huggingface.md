@@ -51,7 +51,7 @@ print(response.choices[0].message.content)
 ### JavaScript
 
 ```javascript
-import { HuggingFace } from '@gpt4free/g4f.dev';
+import { HuggingFace } from '@gpt4free/totocraft.org';
 
 const client = new HuggingFace({ apiKey: 'YOUR_HF_TOKEN' });
 

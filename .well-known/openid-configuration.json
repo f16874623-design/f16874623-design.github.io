@@ -1,10 +1,10 @@
 {
-  "issuer": "https://g4f.dev",
-  "authorization_endpoint": "https://g4f.dev/members/oauth/authorize",
-  "token_endpoint": "https://g4f.dev/members/oauth/token",
-  "userinfo_endpoint": "https://g4f.dev/members/oauth/userinfo",
-  "revocation_endpoint": "https://g4f.dev/members/oauth/revoke",
-  "jwks_uri": "https://g4f.dev/.well-known/jwks.json",
+  "issuer": "https://totocraft.org",
+  "authorization_endpoint": "https://totocraft.org/members/oauth/authorize",
+  "token_endpoint": "https://totocraft.org/members/oauth/token",
+  "userinfo_endpoint": "https://totocraft.org/members/oauth/userinfo",
+  "revocation_endpoint": "https://totocraft.org/members/oauth/revoke",
+  "jwks_uri": "https://totocraft.org/.well-known/jwks.json",
   "scopes_supported": ["openid", "profile", "email"],
   "response_types_supported": ["code"],
   "response_modes_supported": ["query"],
@@ -18,7 +18,7 @@
     "sub", "name", "preferred_username", "email", "email_verified",
     "picture", "profile", "provider", "tier"
   ],
-  "service_documentation": "https://g4f.dev/docs/",
-  "op_policy_uri": "https://g4f.dev/manifesto",
-  "op_tos_uri": "https://g4f.dev/manifesto"
+  "service_documentation": "https://totocraft.org/docs/",
+  "op_policy_uri": "https://totocraft.org/manifesto",
+  "op_tos_uri": "https://totocraft.org/manifesto"
 }

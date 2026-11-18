@@ -3,22 +3,22 @@
   "rewrites": [
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "polli.g4f.dev" }],
+      "has": [{ "type": "host", "value": "polli.totocraft.org" }],
       "destination": "/api/pollinations?path=/:path*"
     },
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "open.g4f.dev" }],
+      "has": [{ "type": "host", "value": "open.totocraft.org" }],
       "destination": "/api/openrouter?path=/:path*"
     },
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "nvidea.g4f.dev" }],
+      "has": [{ "type": "host", "value": "nvidea.totocraft.org" }],
       "destination": "/api/nvidia?path=/:path*"
     },
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "nvidia.g4f.dev" }],
+      "has": [{ "type": "host", "value": "nvidia.totocraft.org" }],
       "destination": "/api/nvidia?path=/:path*"
     },
     {

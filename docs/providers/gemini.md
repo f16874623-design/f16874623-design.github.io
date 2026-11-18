@@ -43,7 +43,7 @@ print(response.choices[0].message.content)
 ### JavaScript
 
 ```javascript
-import { createClient } from '@gpt4free/g4f.dev/providers';
+import { createClient } from '@gpt4free/totocraft.org/providers';
 
 const client = await createClient("gemini", { apiKey: 'YOUR_GOOGLE_API_KEY' });
 

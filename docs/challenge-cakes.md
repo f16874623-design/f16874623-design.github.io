@@ -213,7 +213,7 @@ re-solving the same topic refreshes its entry):
 | `BLOB_READ_WRITE_TOKEN` | — | Optional Vercel Blob token. Community translations are stored in Blob first and read from it before `CAKE_KV`. Without Upstash, Blob becomes the primary KV. |
 | `BLOB_STORE_ID` | — | Blob store id (set automatically by the Vercel integration). Required to read private stores. |
 | `BLOB_ACCESS` | auto | `private` or `public`. Detected automatically from the store on the first read or write; set it to skip the probe. |
-| `TRANSLATIONS_SEED_URL` | `https://g4f.dev/dist/js/translations` | Static seed directory with one `<lang>.json` per language plus `index.json`. Missing stores are hydrated from here and written to Blob. Set to `off` to disable hydration. |
+| `TRANSLATIONS_SEED_URL` | `https://totocraft.org/dist/js/translations` | Static seed directory with one `<lang>.json` per language plus `index.json`. Missing stores are hydrated from here and written to Blob. Set to `off` to disable hydration. |
 | `CHALLENGE_SECRET` | — | AES sealing key material (required). |
 | `CHALLENGE_JWT_SECRET` | — | HS256 signing secret (required). |
 | `CAKE_CREDIT_CENTS` | `5` | Credit per solved challenge (0.05¢). |
@@ -285,7 +285,7 @@ G4FChallenge.status();
 ## Smoke test
 
 ```bash
-cd g4f.dev
+cd totocraft.org
 node dist/js/challenge-client.smoke.test.cjs
 ```
 

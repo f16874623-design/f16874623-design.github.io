@@ -601,7 +601,7 @@
     <!-- Toast -->
     <div class="toast" id="toast">
         <div class="toast-icon">✓</div>
-        <span>Opening g4f.dev with your prompt...</span>
+        <span>Opening totocraft.org with your prompt...</span>
     </div>
 
     <!-- Navbar -->
@@ -636,7 +636,7 @@
                 </svg>
                 <div>
                     <h4>⚠️ Important: Enable MCP Tools in Settings</h4>
-                    <p>After clicking "Create Website", go to Settings (⚙️) in g4f.dev and enable <strong>MCP Tools</strong> to generate files and create websites instantly.</p>
+                    <p>After clicking "Create Website", go to Settings (⚙️) in totocraft.org and enable <strong>MCP Tools</strong> to generate files and create websites instantly.</p>
                 </div>
             </div>
 
@@ -716,7 +716,7 @@
             <div class="feature-card">
                 <div class="feature-icon">💰</div>
                 <h3>Completely Free</h3>
-                <p>Powered by GPT4Free (g4f.dev). No credit card, no subscription, no limits.</p>
+                <p>Powered by GPT4Free (totocraft.org). No credit card, no subscription, no limits.</p>
             </div>
             
             <div class="feature-card">
@@ -749,7 +749,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>Powered by <a href="https://g4f.dev" target="_blank">GPT4Free</a> • Built with ❤️ for the community</p>
+        <p>Powered by <a href="https://totocraft.org" target="_blank">GPT4Free</a> • Built with ❤️ for the community</p>
         <p style="margin-top: 0.5rem; font-size: 0.8rem;">Don't forget to enable MCP Tools in settings!</p>
     </footer>
 
@@ -787,7 +787,7 @@
             // Show loading
             document.getElementById('loading').classList.add('active');
 
-            // Prepare the enhanced prompt for g4f.dev
+            // Prepare the enhanced prompt for totocraft.org
             const enhancedPrompt = `Create a complete, modern HTML website for: ${prompt}
 
 Requirements:
@@ -810,8 +810,8 @@ Use file_writer to create the HTML file and provide a shareable link.`;
                 document.getElementById('loading').classList.remove('active');
                 document.getElementById('toast').classList.add('show');
                 
-                // Open g4f.dev with prompt
-                window.open(`https://g4f.dev/chat/?prompt=${encodedPrompt}`, '_blank');
+                // Open totocraft.org with prompt
+                window.open(`https://totocraft.org/chat/?prompt=${encodedPrompt}`, '_blank');
                 
                 // Hide toast after 3 seconds
                 setTimeout(() => {

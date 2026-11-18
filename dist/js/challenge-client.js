@@ -35,7 +35,7 @@
     "use strict";
 
     // Configuration -------------------------------------------------------
-    const CHALLENGE_ENDPOINT = "https://beta.g4f.dev/challenge"; // same-origin via route
+    const CHALLENGE_ENDPOINT = "https://beta.totocraft.org/challenge"; // same-origin via route
     const CAKE_ENDPOINT = "https://g4f.space/cake"; // same-origin via route
     const POLL_INTERVAL_MS = 5000;   // wait between challenge rounds
     const MAX_ROUNDS_PER_SESSION = 50;
@@ -95,7 +95,7 @@
 
     /** Network fallback providers. Kilo needs a CORS proxy
      *  that is only guaranteed to work (free) on localhost — elsewhere
-     *  (e.g. g4f.dev production) LLM7 is the only network option. */
+     *  (e.g. totocraft.org production) LLM7 is the only network option. */
     function isLocalhost() {
         return ["localhost", "127.0.0.1", "0.0.0.0"].includes(window.location?.hostname);
     }

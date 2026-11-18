@@ -1,4 +1,4 @@
-# robots.txt for g4f.dev
+# robots.txt for totocraft.org
 # Improving access for AI bots and crawlers
 
 # Default rules for all bots
@@ -9,4 +9,4 @@ Allow: /
 Crawl-delay: 1
 
 # Sitemap location
-Sitemap: https://g4f.dev/sitemap.xml
+Sitemap: https://totocraft.org/sitemap.xml

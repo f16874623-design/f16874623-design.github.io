@@ -91,7 +91,7 @@ export default {
                         models: "/v1/models",
                         health: "/health"
                     },
-                    documentation: "https://g4f.dev/docs"
+                    documentation: "https://totocraft.org/docs"
                 });
             }
 

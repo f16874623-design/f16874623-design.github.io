@@ -31,12 +31,12 @@ const CORS_HEADERS = {
     "Access-Control-Expose-Headers": "Content-Type, X-User-Id, Retry-After, X-User-Tier"
   };
   
-  const OAUTH_REDIRECT_URI = "https://g4f.dev/members.html";
+  const OAUTH_REDIRECT_URI = "https://totocraft.org/members.html";
 
   // First-party members page for browsers that block third-party cookies.
-  // The static page lives on g4f.dev; this worker serves a copy on
+  // The static page lives on totocraft.org; this worker serves a copy on
   // auth.g4f.space so the session cookie is first-party there.
-  const MEMBERS_PAGE_URL = "https://g4f.dev/members.html";
+  const MEMBERS_PAGE_URL = "https://totocraft.org/members.html";
   const MEMBERS_PAGE_CACHE_KEY = "https://auth.g4f.space/__g4f_members_page__";
   const MEMBERS_PAGE_CACHE_TTL = 300;
   const COOKIE_PROBE_NAME = "g4f_cookie_probe";
@@ -61,7 +61,7 @@ const ADMIN_USERS = {
 };
 const EXTRA_CONTRIBUTERS = ["Screenmax1234", "kirill670", "georgedorn", "yakovexplorer", "tak-gamingYT", "sasaiber", "redac1ed", "AskingAcake", "tringtoblinbus", "Yatin-Code", "meow18838"];
 
-const ALLOWED_REDIRECT_HOSTNAMES = ["localhost", "127.0.0.1", "llmplayground.net", "g4f.dev", "gpt4free.github.io"];
+const ALLOWED_REDIRECT_HOSTNAMES = ["localhost", "127.0.0.1", "llmplayground.net", "totocraft.org", "gpt4free.github.io"];
 
 // Discord community onboarding. Users who connect Discord and join the
 // support server are upgraded from "new" to "free" immediately instead of
@@ -302,7 +302,7 @@ function getCookieValue(request, name) {
 
 /**
  * Probe whether the browser accepts the SameSite=None auth cookie when the
- * members page is embedded on another site (for example g4f.dev). The client
+ * members page is embedded on another site (for example totocraft.org). The client
  * calls this twice: ?set=<nonce> sets the probe, then ?expect=<nonce> checks
  * that it came back.
  */
@@ -334,7 +334,7 @@ function handleCookieCheck(request) {
 
 /**
  * Serve the members page on auth.g4f.space. The page itself is static and
- * deployed to g4f.dev, so fetch it, add a <base> for its assets, and cache
+ * deployed to totocraft.org, so fetch it, add a <base> for its assets, and cache
  * the result. Running it on the auth host makes the session cookie
  * first-party for browsers that block third-party cookies.
  */
@@ -380,10 +380,10 @@ async function handleMembersPage(request, ctx) {
 
         let html = await upstream.text();
         // if (!/<base\b/i.test(html)) {
-            html = html.replace(/<head\b([^>]*)>/i, (match) => `${match}\n    <base href="https://g4f.dev/">`);
+            html = html.replace(/<head\b([^>]*)>/i, (match) => `${match}\n    <base href="https://totocraft.org/">`);
         // }
         // Keep the self-link on the first-party host instead of bouncing
-        // back to g4f.dev via the <base>.
+        // back to totocraft.org via the <base>.
         html = html.replaceAll('href="/members.html"', 'href="https://auth.g4f.space/members.html"');
 
         cached = new Response(html, {
@@ -1841,7 +1841,7 @@ var USER_TIER_LIMITS = {
    * GET /members/oauth/authorize
    *
    * Standard OAuth 2.0 authorization endpoint. Third-party clients redirect
-   * users here to log in with their g4f.dev account.
+   * users here to log in with their totocraft.org account.
    *
    * Required query params:
    *   response_type=code
@@ -2548,7 +2548,7 @@ ${buttonsHtml}
           preferred_username: user.username,
           email: user.email || null,
           picture: user.avatar || null,
-          profile: `https://g4f.dev/members.html`,
+          profile: `https://totocraft.org/members.html`,
           provider: user.provider,
           tier: user.tier
       }, 200, getCorsHeaders(request));

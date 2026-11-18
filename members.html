@@ -1783,10 +1783,10 @@
             try {
                 const parsed = new URL(url);
                 return [
-                    'g4f.dev', 'gpt4free.github.io',
+                    'totocraft.org', 'gpt4free.github.io',
                     'localhost', '127.0.0.1'
                 ].includes(parsed.hostname) ||
-                       parsed.hostname.endsWith('.g4f.dev') ||
+                       parsed.hostname.endsWith('.totocraft.org') ||
                        parsed.hostname.endsWith('.g4f.space');
             } catch {
                 return false;
@@ -1846,7 +1846,7 @@
         }
 
         // Browsers that block third-party cookies cannot use the session
-        // cookie set by auth.g4f.space while this page runs on g4f.dev.
+        // cookie set by auth.g4f.space while this page runs on totocraft.org.
         // Probe for cookie support and, when it is missing, move to the
         // first-party copy of this page on auth.g4f.space.
         async function thirdPartyCookiesBlocked() {
@@ -2330,7 +2330,7 @@
             if (error) {
                 showConnectionError(error);
                 urlParams.delete('error');
-                // Absolute origin: auth.g4f.space injects a g4f.dev <base>.
+                // Absolute origin: auth.g4f.space injects a totocraft.org <base>.
                 window.history.replaceState(
                     {}, document.title,
                     callbackUrl.origin + callbackUrl.pathname + callbackUrl.search + callbackUrl.hash
@@ -2405,7 +2405,7 @@
                         }
                     }
                     showToastFormat('Successfully signed in with {0}!', 'success', user.provider);
-                    // Keep the current origin; auth.g4f.space has a g4f.dev <base>.
+                    // Keep the current origin; auth.g4f.space has a totocraft.org <base>.
                     window.history.replaceState(
                         {}, document.title,
                         window.location.origin + window.location.pathname

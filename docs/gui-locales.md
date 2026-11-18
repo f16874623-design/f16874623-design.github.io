@@ -48,8 +48,8 @@ to `PAGES` and `COPY` only when its visible copy can be translated.
 
 ## Static GitHub Pages mirror
 
-The public site at <https://g4f.dev> is statically hosted on GitHub Pages, so it
-cannot run the Flask middleware. `g4f.dev/scripts/build-locales.mjs` generates
+The public site at <https://totocraft.org> is statically hosted on GitHub Pages, so it
+cannot run the Flask middleware. `totocraft.org/scripts/build-locales.mjs` generates
 prefixed copies of every HTML page for each language in the community
 translation catalog (38 at the time of writing: `ar`, `bg`, `cs`, `da`, `de`,
 `el`, `es`, `et`, `fa`, `fi`, `fr`, `he`, `hi`, `hr`, `hu`, `id`, `it`, `ja`,
@@ -77,7 +77,7 @@ languages the Flask GUI serves. Unprefixed URLs stay canonical for English, and
 `/en/...` is not generated; selecting English from a locale page returns to the
 unprefixed path.
 
-The build reads `https://beta.g4f.dev/challenge/translations?lang=<lang>` by
+The build reads `https://beta.totocraft.org/challenge/translations?lang=<lang>` by
 default. Set `G4F_TRANSLATIONS_URL`, `--translations-url`, or
 `--translations-file` to use another source, or pass `--no-translations` for an
 offline build. When the API fails or returns an empty package, the build falls

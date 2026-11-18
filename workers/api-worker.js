@@ -102,7 +102,7 @@ var CORS_HEADERS = {
   "Access-Control-Allow-Headers": "Content-Type, Authorization, X-API-Key, x-user, x-user-id, x-workspace-secret, x-ignored, x-secret, x-recognition-language, if-none-match",
   "Access-Control-Expose-Headers": "Content-Type, X-User-Id, X-User-Tier, X-Provider, X-Model, X-Server, X-Url, X-Usage-Total-Tokens, X-Stream, X-Ratelimit-Model-Factor, X-Ratelimit-Remaining-Requests, X-Ratelimit-Remaining-Tokens, X-Ratelimit-Limit-Requests, X-Ratelimit-Limit-Tokens, X-Usage-Prompt-Tokens, X-Pollen-Cost, X-Cake-Cost, X-Cake-Cost-Cents"
 };
-const ALLOWED_REDIRECT_HOSTNAMES = ["localhost", "127.0.0.1", "g4f.dev", "gpt4free.github.io"];
+const ALLOWED_REDIRECT_HOSTNAMES = ["localhost", "127.0.0.1", "totocraft.org", "gpt4free.github.io"];
 function isValidRedirect(url) {
     try {
         const parsed = new URL(url);
@@ -300,7 +300,7 @@ const POLLINATIONS_HOSTS = new Set([
   "community.g4f.space",
   "pollinations.g4f-dev.workers.dev",
   "pollinations.g4f-space.workers.dev",
-  "polli.g4f.dev"
+  "polli.totocraft.org"
 ]);
 // g4f.space path mounts handled by the Pollinations worker.
 const POLLINATIONS_PATH_MOUNTS = ["/api/pollinations", "/api/community"];
@@ -355,8 +355,8 @@ function getCorsHeaders(request) {
     }
 }
 var EXTRA_HEADERS = {
-  "HTTP-Referer": "https://g4f.dev",
-  "X-OpenRouter-Title": "GPT4Free (g4f.dev)",
+  "HTTP-Referer": "https://totocraft.org",
+  "X-OpenRouter-Title": "GPT4Free (totocraft.org)",
   "X-OpenRouter-Categories": "cli-agent,cloud-agent,roleplay,general-chat",
 };
 var ACCESS_CONTROL_ALLOW_ORIGIN = {
@@ -396,10 +396,10 @@ var URL_MAP = {
   "https://pollinations.g4f-dev.workers.dev/free/quota": "https://gen.pollinations.ai/account/balance",
   "https://pollinations.g4f-dev.workers.dev/community/quota": "https://gen.pollinations.ai/account/balance",
   "https://pollinations.g4f-dev.workers.dev/v1/quota": "https://gen.pollinations.ai/account/balance",
-  "https://polli.g4f.dev/quota": "https://gen.pollinations.ai/account/balance",
-  "https://polli.g4f.dev/free/quota": "https://gen.pollinations.ai/account/balance",
-  "https://polli.g4f.dev/community/quota": "https://gen.pollinations.ai/account/balance",
-  "https://polli.g4f.dev/v1/quota": "https://gen.pollinations.ai/account/balance",
+  "https://polli.totocraft.org/quota": "https://gen.pollinations.ai/account/balance",
+  "https://polli.totocraft.org/free/quota": "https://gen.pollinations.ai/account/balance",
+  "https://polli.totocraft.org/community/quota": "https://gen.pollinations.ai/account/balance",
+  "https://polli.totocraft.org/v1/quota": "https://gen.pollinations.ai/account/balance",
   "https://pollinations.g4f.space/quota": "https://gen.pollinations.ai/account/balance",
   "https://pollinations.g4f.space/v1/quota": "https://gen.pollinations.ai/account/balance",
   "https://pollinations.g4f.space/free/quota": "https://gen.pollinations.ai/account/balance",
@@ -410,7 +410,7 @@ var URL_MAP = {
   "https://g4f.space/api/puter/quota": "https://api.puter.com/metering/usage",
   "https://router.huggingface.co/v1/quota": "https://huggingface.co/api/whoami-v2"
 }
-let waitForProviders = (env)=>fetch("https://g4f.dev/dist/js/providers.json")
+let waitForProviders = (env)=>fetch("https://totocraft.org/dist/js/providers.json")
   .then(r=>r.json()).then(async (p)=>{
     DEFAULT_MODELS = p.serverDefaultModels || {};
     HIDDEN_SERVERS = p.hiddenServers || {};
@@ -617,7 +617,7 @@ async function safe(request, env, ctx) {
     }
     if (["/", "/chat", "/chat/", "/chat/v2", "/playground", "/playground/"].includes(pathname) && request.method != "POST") {
       const newUrl = new URL(request.url);
-      newUrl.hostname = "g4f.dev";
+      newUrl.hostname = "totocraft.org";
       return Response.redirect(newUrl.toString(), 302);
     }
     if (pathname == "/api/audio/models") {
@@ -887,7 +887,7 @@ async function safe(request, env, ctx) {
       if (userProvidedKey && (pathname.startsWith("/v1") || ["/", "/chat/completions", "/models"].includes(pathname))) {
         return jsonResponse({
           error: {
-            message: "User-provided API keys are not supported for v1 endpoints. Please authenticate with a g4f.dev session or API key (g4f_*) to use v1 endpoints, or use the /api/{provider}/chat/completions endpoint with your own key.",
+            message: "User-provided API keys are not supported for v1 endpoints. Please authenticate with a totocraft.org session or API key (g4f_*) to use v1 endpoints, or use the /api/{provider}/chat/completions endpoint with your own key.",
             type: "authentication_error"
           }
         }, 403);
@@ -2208,7 +2208,7 @@ async function handleProxyToServer(request, env, ctx, server, subPath, cacheKey,
   } else {
     targetUrl = `${server.base_url}${subPath}`;
   }
-  targetUrl = targetUrl.replace('https://polli.g4f.dev', env.POLLINATIONS_WORKER_URL || 'https://pollinations.g4f.space')
+  targetUrl = targetUrl.replace('https://polli.totocraft.org', env.POLLINATIONS_WORKER_URL || 'https://pollinations.g4f.space')
   const mappedUrl = URL_MAP[targetUrl];
   if (mappedUrl) {
     targetUrl = mappedUrl;
@@ -3876,10 +3876,10 @@ async function applyAnonymousCreditGate(env, ctx, request, user, requestBody, ra
   if (tokenBudget <= 0) {
     return jsonResponse({
       error: {
-        message: "No cake credits. Bake proof-of-work cakes at g4f.dev/chat to earn anonymous usage, or sign up at g4f.dev/members.html.",
+        message: "No cake credits. Bake proof-of-work cakes at totocraft.org/chat to earn anonymous usage, or sign up at totocraft.org/members.html.",
         type: "insufficient_credits",
-        upgrade_url: "https://g4f.dev/members.html",
-        bake_url: "https://g4f.dev/chat"
+        upgrade_url: "https://totocraft.org/members.html",
+        bake_url: "https://totocraft.org/chat"
       }
     }, 402, {
       "X-Ratelimit-Limit-Tokens": "0",
@@ -3890,13 +3890,13 @@ async function applyAnonymousCreditGate(env, ctx, request, user, requestBody, ra
   if (promptTokens > tokenBudget) {
     return jsonResponse({
       error: {
-        message: `Cake credit budget exceeded. This request needs ~${promptTokens} prompt tokens but your IP has ${tokenBudget} available (${creditCents}¢). Bake more cakes at g4f.dev/chat or sign up at g4f.dev/members.html.`,
+        message: `Cake credit budget exceeded. This request needs ~${promptTokens} prompt tokens but your IP has ${tokenBudget} available (${creditCents}¢). Bake more cakes at totocraft.org/chat or sign up at totocraft.org/members.html.`,
         type: "insufficient_credits",
         required_tokens: promptTokens,
         available_tokens: tokenBudget,
         credit_cents: creditCents,
-        upgrade_url: "https://g4f.dev/members.html",
-        bake_url: "https://g4f.dev/chat"
+        upgrade_url: "https://totocraft.org/members.html",
+        bake_url: "https://totocraft.org/chat"
       }
     }, 402, {
       "X-Ratelimit-Limit-Tokens": String(tokenBudget),
@@ -4612,7 +4612,7 @@ async function proxyToPassG4f(request, env, pathname, search, user, cacheKey, ct
   if (!user && org && BLOCKED_ORGS.includes(org)) {
     return jsonResponse({
       error: {
-        message: `Access from "${org}" blocked. Sign up at g4f.dev/members.html for access from cloud.`,
+        message: `Access from "${org}" blocked. Sign up at totocraft.org/members.html for access from cloud.`,
         type: "authentication_required"
       }
     }, 403);

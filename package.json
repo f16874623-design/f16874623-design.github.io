@@ -1,5 +1,5 @@
 {
-  "name": "@gpt4free/g4f.dev",
+  "name": "@gpt4free/totocraft.org",
   "version": "1.1.2",
   "description": "Use the official GPT4Free.js client right in the browser—no backend needed",
   "type": "module",
@@ -32,13 +32,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gpt4free/g4f.dev.git"
+    "url": "git+https://github.com/gpt4free/totocraft.org.git"
   },
   "keywords": [
     "gpt4free",
     "gpt4free.js",
     "g4f",
-    "g4f.dev",
+    "totocraft.org",
     "javascript",
     "npm",
     "browser",
@@ -82,7 +82,7 @@
   "author": "hlohaus",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gpt4free/g4f.dev/issues"
+    "url": "https://github.com/gpt4free/totocraft.org/issues"
   },
-  "homepage": "https://github.com/gpt4free/g4f.dev#readme"
+  "homepage": "https://github.com/gpt4free/totocraft.org#readme"
 }

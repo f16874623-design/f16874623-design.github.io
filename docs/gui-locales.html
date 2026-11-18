@@ -13,18 +13,18 @@
     <meta property="og:type" content="article" />
     <meta property="og:title" content="GUI locale and diagnostics routes | GPT4Free Documentation" />
     <meta property="og:description" content="GPT4Free documentation for GUI locale and diagnostics routes. Free AI endpoints, examples, and comprehensive guides." />
-    <meta property="og:url" content="https://g4f.dev/docs/gui-locales.html" />
+    <meta property="og:url" content="https://totocraft.org/docs/gui-locales.html" />
     <meta property="og:site_name" content="GPT4Free Documentation" />
-    <meta property="og:image" content="https://g4f.dev/dist/img/g4f.svg" />
+    <meta property="og:image" content="https://totocraft.org/dist/img/g4f.svg" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="GUI locale and diagnostics routes | GPT4Free Documentation" />
     <meta name="twitter:description" content="Free AI endpoints and comprehensive documentation for GUI locale and diagnostics routes." />
-    <meta name="twitter:image" content="https://g4f.dev/dist/img/g4f.svg" />
+    <meta name="twitter:image" content="https://totocraft.org/dist/img/g4f.svg" />
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://g4f.dev/docs/gui-locales.html" />
+    <link rel="canonical" href="https://totocraft.org/docs/gui-locales.html" />
 
     <link rel="apple-touch-icon" sizes="180x180" href="/dist/img/g4f.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="/dist/img/g4f-32x32.png" />
@@ -378,21 +378,21 @@
       "description": "GPT4Free documentation for GUI locale and diagnostics routes. Complete guides, examples, and API reference for free AI endpoints.",
       "author": {
         "@type": "Organization",
-        "@id": "https://g4f.dev/#organization",
+        "@id": "https://totocraft.org/#organization",
         "name": "GPT4Free",
-        "url": "https://g4f.dev",
+        "url": "https://totocraft.org",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://g4f.dev/dist/img/g4f.svg"
+          "url": "https://totocraft.org/dist/img/g4f.svg"
         }
       },
       "publisher": {
         "@type": "Organization",
-        "@id": "https://g4f.dev/#organization"
+        "@id": "https://totocraft.org/#organization"
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://g4f.dev/docs/gui-locales.html"
+        "@id": "https://totocraft.org/docs/gui-locales.html"
       },
       "datePublished": "2024-01-01T00:00:00Z",
       "dateModified": "2024-01-01T00:00:00Z",
@@ -456,8 +456,8 @@ Chat and playground content is mostly dynamic and relies on the runtime global
 translations. Static translations live in <code>g4f/gui/server/locale.py</code>; add a page
 to <code>PAGES</code> and <code>COPY</code> only when its visible copy can be translated.</p>
 <h2>Static GitHub Pages mirror</h2>
-<p>The public site at &lt;https://g4f.dev&gt; is statically hosted on GitHub Pages, so it
-cannot run the Flask middleware. <code>g4f.dev/scripts/build-locales.mjs</code> generates
+<p>The public site at &lt;https://totocraft.org&gt; is statically hosted on GitHub Pages, so it
+cannot run the Flask middleware. <code>totocraft.org/scripts/build-locales.mjs</code> generates
 prefixed copies of every HTML page for each language in the community
 translation catalog (38 at the time of writing: <code>ar</code>, <code>bg</code>, <code>cs</code>, <code>da</code>, <code>de</code>,
 <code>el</code>, <code>es</code>, <code>et</code>, <code>fa</code>, <code>fi</code>, <code>fr</code>, <code>he</code>, <code>hi</code>, <code>hr</code>, <code>hu</code>, <code>id</code>, <code>it</code>, <code>ja</code>,
@@ -483,7 +483,7 @@ bootstrap then covers dynamic copy for all 38 API languages, not just the four
 languages the Flask GUI serves. Unprefixed URLs stay canonical for English, and
 <code>/en/...</code> is not generated; selecting English from a locale page returns to the
 unprefixed path.</p>
-<p>The build reads <code>https://beta.g4f.dev/challenge/translations?lang=&lt;lang&gt;</code> by
+<p>The build reads <code>https://beta.totocraft.org/challenge/translations?lang=&lt;lang&gt;</code> by
 default. Set <code>G4F_TRANSLATIONS_URL</code>, <code>--translations-url</code>, or
 <code>--translations-file</code> to use another source, or pass <code>--no-translations</code> for an
 offline build. When the API fails or returns an empty package, the build falls

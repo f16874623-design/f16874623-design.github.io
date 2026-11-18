@@ -220,7 +220,7 @@
             removeFlowItem(VERIFIER_KEY);
         }
         // clean the URL (drop code/state). Use an absolute current-origin URL:
-        // auth.g4f.space serves this page with <base href="https://g4f.dev/">,
+        // auth.g4f.space serves this page with <base href="https://totocraft.org/">,
         // so a path-relative URL would resolve to another origin and
         // replaceState() would throw a SecurityError.
         url.searchParams.delete("code");

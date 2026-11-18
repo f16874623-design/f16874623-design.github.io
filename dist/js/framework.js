@@ -1,5 +1,5 @@
 /* ================================================================== *
- * g4f.dev framework — shared runtime for all pages
+ * totocraft.org framework — shared runtime for all pages
  *
  * Classic script (no build step), loaded in <head> before the addons.
  * Everything public is exposed as window globals plus the `framework`
@@ -23,7 +23,7 @@
 // 1. Constants & environment
 // ---------------------------------------------------------------------------
 
-const G4F_HOST = "https://g4f.dev";
+const G4F_HOST = "https://totocraft.org";
 const G4F_WILDCARD = ".g4f.space";
 const G4F_HOST_PASS = "https://g4f.space";
 const DB_NAME = 'chat-db';
@@ -35,7 +35,7 @@ const isG4fHost = window.location.origin === G4F_HOST || window.location.origin.
 window.framework = {}
 
 if (localStorage.getItem("debugMode") === "true") {
-    if (!document.querySelector('script[src="https://g4f.dev/dist/js/debug.js"]')) {
+    if (!document.querySelector('script[src="https://totocraft.org/dist/js/debug.js"]')) {
         if (window.location === window.parent.location) {
             const debugEl = document.createElement('script');
             debugEl.src = '/dist/js/debug.js';
@@ -195,7 +195,7 @@ function hasWords(text) {
 // translateAll() as a free first source and by the translations UI to show
 // coverage per language.
 const GLOBAL_TRANSLATIONS_KEY = "globalTranslations";
-const CHALLENGE_TRANSLATIONS_URL = "https://beta.g4f.dev/challenge/translations";
+const CHALLENGE_TRANSLATIONS_URL = "https://beta.totocraft.org/challenge/translations";
 framework.globalTranslations = (() => {
     try {
         return JSON.parse(localStorage.getItem(GLOBAL_TRANSLATIONS_KEY) || "{}");

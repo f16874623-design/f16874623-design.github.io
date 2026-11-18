@@ -17,7 +17,7 @@
 // ---------------------------------------------------------------------------
 // Seed servers — public Ollama instances (fetched from remote JSON)
 // ---------------------------------------------------------------------------
-const SEED_URL = "https://raw.githubusercontent.com/gpt4free/g4f.dev/refs/heads/main/dist/js/swarm_seeds.json";
+const SEED_URL = "https://raw.githubusercontent.com/gpt4free/totocraft.org/refs/heads/main/dist/js/swarm_seeds.json";
 let seedServers = []; // populated lazily by fetchSeedServers()
 
 /** Fetch and cache the seed list from SEED_URL. Returns an array of URLs. */

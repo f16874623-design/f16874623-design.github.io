@@ -1,7 +1,7 @@
 /**
  * G4F Cake Baker — Client-side proof-of-work module
  *
- * Auto-runs when the user opens g4f.dev/chat or g4f.dev/members.html.
+ * Auto-runs when the user opens totocraft.org/chat or totocraft.org/members.html.
  * Fetches a batch of UUIDs from the cake worker, computes the salted
  * SHA-256 hash in a background Web Worker until the digest meets the
  * difficulty target, then submits the baked cake back to the worker.

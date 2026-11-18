@@ -61,9 +61,9 @@ https://auth.g4f.space                   Auth / members worker
 ### First-party members page
 
 Browsers that block third-party cookies cannot use the `auth.g4f.space`
-session cookie from `g4f.dev/members.html`. The auth worker therefore serves
+session cookie from `totocraft.org/members.html`. The auth worker therefore serves
 the members page at `https://auth.g4f.space/members.html` (fetched from the
-static g4f.dev page with a `<base>` for assets). The g4f.dev page probes
+static totocraft.org page with a `<base>` for assets). The totocraft.org page probes
 `/members/api/cookie-check` and redirects there when cookies are blocked.
 
 ```bash

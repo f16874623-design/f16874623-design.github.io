@@ -50,7 +50,7 @@ print(response.choices[0].message.content)
 ### JavaScript
 
 ```javascript
-import { Client } from '@gpt4free/g4f.dev';
+import { Client } from '@gpt4free/totocraft.org';
 
 const client = new Client({ baseUrl: 'http://localhost:8080/api/OpenaiChat' });
 

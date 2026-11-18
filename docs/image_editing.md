@@ -1,6 +1,6 @@
 ## GPT4Free Image Editing Variation Documentation
 
-This guide explains how to use the image editing variation feature in **GPT4Free (g4f.dev)**. It covers generating variations of images using different providers, handling local file uploads, and showcasing example results.
+This guide explains how to use the image editing variation feature in **GPT4Free (totocraft.org)**. It covers generating variations of images using different providers, handling local file uploads, and showcasing example results.
 
 ---
 
@@ -111,7 +111,7 @@ client = AsyncClient()
 
 async def main_with_openai():
     result = await client.images.create_variation(
-        image=Path("g4f.dev/docs/images/strawberry.jpg"),
+        image=Path("totocraft.org/docs/images/strawberry.jpg"),
         provider=OpenaiAccount,
         prompt="Change food color to green",
         response_format="url"
@@ -120,7 +120,7 @@ async def main_with_openai():
 
 async def main_with_copilot():
     result = await client.images.create_variation(
-        image=Path("g4f.dev/docs/images/strawberry.jpg"),
+        image=Path("totocraft.org/docs/images/strawberry.jpg"),
         provider=CopilotAccount,
         prompt="Generate a variant of this image",
         response_format="url"
@@ -145,7 +145,7 @@ client = AsyncClient()
 
 async def main_with_hugging_space():
     result = await client.images.create_variation(
-        image=Path("g4f.dev/docs/images/strawberry.jpg"),
+        image=Path("totocraft.org/docs/images/strawberry.jpg"),
         provider=HuggingSpace,
         model="flux-kontext-dev",
         prompt="Change color to black and white",
@@ -155,7 +155,7 @@ async def main_with_hugging_space():
 
 async def main_with_azure():
     result = await client.images.create_variation(
-        image=Path("g4f.dev/docs/images/strawberry.jpg"),
+        image=Path("totocraft.org/docs/images/strawberry.jpg"),
         provider=Azure,
         model="flux-kontext",
         prompt="Add text 'Hello World' in the center",
@@ -176,7 +176,7 @@ client = AsyncClient()
 
 async def main_pollinations():
     result = await client.images.create_variation(
-        image="https://g4f.dev/docs/images/strawberry.jpg",
+        image="https://totocraft.org/docs/images/strawberry.jpg",
         provider=PollinationsAI,
         prompt="Remove background",
         model="kontext",
@@ -186,7 +186,7 @@ async def main_pollinations():
 
 async def main_with_together():
     result = await client.images.create_variation(
-        image="https://g4f.dev/docs/images/strawberry.jpg",
+        image="https://totocraft.org/docs/images/strawberry.jpg",
         provider=Together,
         model="flux-kontext-pro",
         prompt="Add nature background",

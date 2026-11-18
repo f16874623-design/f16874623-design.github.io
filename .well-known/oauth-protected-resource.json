@@ -1,7 +1,7 @@
 {
-  "resource": "https://g4f.dev",
-  "authorization_servers": ["https://g4f.dev"],
-  "jwks_uri": "https://g4f.dev/.well-known/jwks.json",
+  "resource": "https://totocraft.org",
+  "authorization_servers": ["https://totocraft.org"],
+  "jwks_uri": "https://totocraft.org/.well-known/jwks.json",
   "bearer_methods_supported": ["header"],
-  "resource_documentation": "https://g4f.dev/docs/authentication.html"
+  "resource_documentation": "https://totocraft.org/docs/authentication.html"
 }

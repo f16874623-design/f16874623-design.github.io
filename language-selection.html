@@ -12,9 +12,9 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="G4F - Language Selection" />
     <meta property="og:description" content="Community UI translations: coverage per language, load packages, clear stores." />
-    <meta property="og:url" content="https://g4f.dev/language-selection.html" />
+    <meta property="og:url" content="https://totocraft.org/language-selection.html" />
     <meta property="og:site_name" content="GPT4Free Documentation" />
-    <link rel="canonical" href="https://g4f.dev/language-selection.html" />
+    <link rel="canonical" href="https://totocraft.org/language-selection.html" />
 
     <link rel="apple-touch-icon" sizes="180x180" href="/dist/img/g4f.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="/dist/img/g4f-32x32.png" />
@@ -242,9 +242,9 @@
 
         <footer>
             Translations are contributed by the community via
-            <a href="https://g4f.dev/chat/">chat translation challenges</a> —
+            <a href="https://totocraft.org/chat/">chat translation challenges</a> —
             solve challenges with your local model to earn cakes and fill your language.
-            See the <a href="https://g4f.dev/docs/challenge-cakes">docs</a>.
+            See the <a href="https://totocraft.org/docs/challenge-cakes">docs</a>.
         </footer>
     </div>
 
@@ -253,7 +253,7 @@
     <script>
         "use strict";
 
-        const TRANSLATIONS_URL = "https://beta.g4f.dev/challenge/translations";
+        const TRANSLATIONS_URL = "https://beta.totocraft.org/challenge/translations";
 
         // Translation helpers: `t()` resolves a single UI text through the
         // community translation store, `tpl()` resolves a template with
@@ -318,7 +318,7 @@
         let localeLanguagesPromise = null;
 
         // Which locale-prefixed routes does the surrounding site expose?
-        // Localized pages carry hreflang alternates (g4f.dev generates all API
+        // Localized pages carry hreflang alternates (totocraft.org generates all API
         // languages; the Flask GUI serves its smaller set). The GUI also
         // answers /meta with a route map. An empty set means the caller should
         // fall back to the static API language list.
@@ -578,7 +578,7 @@
                     </div>
                     <div class="lang-actions">
                         ${entry.seed
-                            ? `<a class="small" style="color:var(--lime);font-size:12px;align-self:center" href="https://g4f.dev/chat/" title="${escapeHtml(t("Solve translation challenges in chat"))}">${escapeHtml(t("Start translating →"))}</a>`
+                            ? `<a class="small" style="color:var(--lime);font-size:12px;align-self:center" href="https://totocraft.org/chat/" title="${escapeHtml(t("Solve translation challenges in chat"))}">${escapeHtml(t("Start translating →"))}</a>`
                             : isSelected
                                 ? `<button class="small danger" data-action="unload" data-lang="${escapeHtml(entry.language)}">${escapeHtml(t("🗑️ Unload"))}</button>`
                                 : `<button class="small primary" data-action="load" data-lang="${escapeHtml(entry.language)}">${escapeHtml(t("⬇️ Load"))}</button>`}

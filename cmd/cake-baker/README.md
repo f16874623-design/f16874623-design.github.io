@@ -1,6 +1,6 @@
 # cake-baker
 
-A Go port of the g4f.dev cake baker. It performs the same proof-of-work
+A Go port of the totocraft.org cake baker. It performs the same proof-of-work
 protocol as the browser-side `dist/js/cake-baker.js` against the
 `cake-worker` Cloudflare Worker:
 

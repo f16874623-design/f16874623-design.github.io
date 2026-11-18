@@ -5,7 +5,7 @@ const MembersAuth = (() => {
   const EXPIRES_KEY = 'g4f_expires';
   const API_KEY_PREFIX = 'g4f_';
   const DEFAULT_ACCOUNT_NAME = 'User';
-  const KNOWN_ORIGINS = ["https://g4f.dev", "http://localhost:8080", "http://localhost:1337", "https://gpt4free.github.io"]; 
+  const KNOWN_ORIGINS = ["https://totocraft.org", "http://localhost:8080", "http://localhost:1337", "https://gpt4free.github.io"]; 
 
   function getHash() {
     return location.hash.slice(1) || '/';

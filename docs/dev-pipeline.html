@@ -13,18 +13,18 @@
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Automatic development pipeline | GPT4Free Documentation" />
     <meta property="og:description" content="GPT4Free documentation for Automatic development pipeline. Free AI endpoints, examples, and comprehensive guides." />
-    <meta property="og:url" content="https://g4f.dev/docs/dev-pipeline.html" />
+    <meta property="og:url" content="https://totocraft.org/docs/dev-pipeline.html" />
     <meta property="og:site_name" content="GPT4Free Documentation" />
-    <meta property="og:image" content="https://g4f.dev/dist/img/g4f.svg" />
+    <meta property="og:image" content="https://totocraft.org/dist/img/g4f.svg" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Automatic development pipeline | GPT4Free Documentation" />
     <meta name="twitter:description" content="Free AI endpoints and comprehensive documentation for Automatic development pipeline." />
-    <meta name="twitter:image" content="https://g4f.dev/dist/img/g4f.svg" />
+    <meta name="twitter:image" content="https://totocraft.org/dist/img/g4f.svg" />
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://g4f.dev/docs/dev-pipeline.html" />
+    <link rel="canonical" href="https://totocraft.org/docs/dev-pipeline.html" />
 
     <link rel="apple-touch-icon" sizes="180x180" href="/dist/img/g4f.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="/dist/img/g4f-32x32.png" />
@@ -378,21 +378,21 @@
       "description": "GPT4Free documentation for Automatic development pipeline. Complete guides, examples, and API reference for free AI endpoints.",
       "author": {
         "@type": "Organization",
-        "@id": "https://g4f.dev/#organization",
+        "@id": "https://totocraft.org/#organization",
         "name": "GPT4Free",
-        "url": "https://g4f.dev",
+        "url": "https://totocraft.org",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://g4f.dev/dist/img/g4f.svg"
+          "url": "https://totocraft.org/dist/img/g4f.svg"
         }
       },
       "publisher": {
         "@type": "Organization",
-        "@id": "https://g4f.dev/#organization"
+        "@id": "https://totocraft.org/#organization"
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://g4f.dev/docs/dev-pipeline.html"
+        "@id": "https://totocraft.org/docs/dev-pipeline.html"
       },
       "datePublished": "2024-01-01T00:00:00Z",
       "dateModified": "2024-01-01T00:00:00Z",
@@ -495,19 +495,19 @@ in order:</p>
 <ol><li><p><code>FREEFLOW_TOKEN</code>, <code>FREEFLOW_API_KEY</code>, or <code>G4F_FREEFLOW_TOKEN</code>;</p></li><li><p><code>&lt;project&gt;/.pi/agent/token</code>;</p></li><li><p><code>&lt;repository&gt;/.pi/agent/token</code>;</p></li><li><p><code>~/.pi/agent/token</code>;</p></li><li><p>no token (in case a local relay allows it).</p></li></ol>
 <p>Set <code>FREEFLOW_BASE_URL</code> (or <code>base_url</code> in <code>dev-pipeline.json</code>) to point at a
 different proxy.</p>
-<h2>Enabling g4f.dev</h2>
+<h2>Enabling totocraft.org</h2>
 <p>The gpt4free checkout is configured as <code>gpt4free</code>; the website checkout is
-configured as <code>g4f.dev</code> at <code>../g4f.dev</code>. Missing projects are skipped, so the
+configured as <code>totocraft.org</code> at <code>../totocraft.org</code>. Missing projects are skipped, so the
 pipeline works with only one checkout.</p>
-<pre><code class="language-bash">git clone --depth 1 https://github.com/gpt4free/g4f.dev.git ../g4f.dev
-bin/dev-pipeline init --project g4f.dev</code></pre>
+<pre><code class="language-bash">git clone --depth 1 https://github.com/gpt4free/totocraft.org.git ../totocraft.org
+bin/dev-pipeline init --project totocraft.org</code></pre>
 <p><code>init</code> creates an <code>AGENTS.md</code> in that checkout with a bootstrap task and the
 same machine-readable state block. Add website-specific checks to
 <code>dev-pipeline.json</code> when you know the command, for example:</p>
 <pre><code class="language-json">{
   &quot;projects&quot;: {
-    &quot;g4f.dev&quot;: {
-      &quot;path&quot;: &quot;../g4f.dev&quot;,
+    &quot;totocraft.org&quot;: {
+      &quot;path&quot;: &quot;../totocraft.org&quot;,
       &quot;checks&quot;: [[&quot;node&quot;, &quot;scripts/check-js.mjs&quot;]]
     }
   }
@@ -555,7 +555,7 @@ bin/dev-pipeline doctor
 
 # Create/update a PR from the current working tree
 bin/dev-pipeline pr
-bin/dev-pipeline pr --project g4f.dev
+bin/dev-pipeline pr --project totocraft.org
 
 # Push the current branch without creating or updating a PR
 bin/dev-pipeline push
@@ -567,7 +567,7 @@ back to the other configured remotes when one is not writable. Use
 <p><code>pr</code> creates <code>pipeline/pr-&lt;timestamp&gt;</code>, commits the working tree, pushes it to
 a GitHub remote, then creates or updates the PR with <code>gh</code>. By default it
 operates on the pipeline root checkout; use <code>--project &lt;name&gt;</code> to open the PR
-from another configured checkout such as <code>g4f.dev</code>. When the current branch is
+from another configured checkout such as <code>totocraft.org</code>. When the current branch is
 already a <code>pipeline/pr-*</code> branch, it commits and pushes that branch in place, so
 the existing PR is updated instead of a second PR being opened (a clean branch
 is allowed in that case). It tries <code>origin</code> first and falls back to another
@@ -695,7 +695,7 @@ models, then OVHcloud models as keyless fallbacks.</p>
 <tbody>
 <tr>
 <td><code>projects</code></td>
-<td>gpt4free + g4f.dev</td>
+<td>gpt4free + totocraft.org</td>
 <td>map of project name to <code>path</code>, <code>agents_file</code>, <code>checks</code>, <code>enabled</code></td>
 </tr>
 <tr>
@@ -843,8 +843,8 @@ review. There is no automatic revert.</p></li><li><p>Free quotas are shared. Kee
 <td>Install Pi/OMP and <code>pi install npm:pi-freeflow</code></td>
 </tr>
 <tr>
-<td><code>project g4f.dev path does not exist</code></td>
-<td>Clone g4f.dev or remove/disable it in <code>dev-pipeline.json</code></td>
+<td><code>project totocraft.org path does not exist</code></td>
+<td>Clone totocraft.org or remove/disable it in <code>dev-pipeline.json</code></td>
 </tr>
 <tr>
 <td><code>baseline checks failed</code></td>

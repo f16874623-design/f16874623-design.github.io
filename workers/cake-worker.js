@@ -38,9 +38,9 @@
  */
 
 const ALLOWED_ORIGINS = new Set([
-    "https://g4f.dev",
+    "https://totocraft.org",
     "https://g4f.space",
-    "https://www.g4f.dev",
+    "https://www.totocraft.org",
     "https://www.g4f.space",
     "http://localhost:8090",
     "http://localhost:8080",

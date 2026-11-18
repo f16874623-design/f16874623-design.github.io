@@ -52,7 +52,7 @@ print(response.choices[0].message.content)
 ### JavaScript
 
 ```javascript
-import { Pollinations } from '@gpt4free/g4f.dev';
+import { Pollinations } from '@gpt4free/totocraft.org';
 
 const client = new Pollinations();
 

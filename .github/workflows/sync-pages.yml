@@ -1,4 +1,4 @@
-# Syncs every change from this repo (gpt4free/g4f.dev) to the GitHub Pages
+# Syncs every change from this repo (gpt4free/totocraft.org) to the GitHub Pages
 # mirror repository (by default hlohaus/hlohaus.github.io).
 #
 # Pushes CONTENT ONLY: a single commit on top of the mirror's main with this
@@ -66,8 +66,8 @@ jobs:
         run: |
           # No-op when this file runs in the mirror repo (it gets there via
           # the sync) — only the origin repo pushes to the mirror.
-          if [ "$GITHUB_REPOSITORY" != "gpt4free/g4f.dev" ]; then
-            echo "Skipping: this workflow only syncs from gpt4free/g4f.dev, not from ${GITHUB_REPOSITORY}."
+          if [ "$GITHUB_REPOSITORY" != "gpt4free/totocraft.org" ]; then
+            echo "Skipping: this workflow only syncs from gpt4free/totocraft.org, not from ${GITHUB_REPOSITORY}."
             exit 0
           fi
           if [ -z "$MIRROR_TOKEN" ]; then
@@ -109,5 +109,5 @@ jobs:
             echo "Mirror already up to date."
             exit 0
           fi
-          git commit -m "Sync content from gpt4free/g4f.dev@${GITHUB_SHA::7}"
+          git commit -m "Sync content from gpt4free/totocraft.org@${GITHUB_SHA::7}"
           git push mirror sync:main

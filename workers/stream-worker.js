@@ -4,7 +4,7 @@ export default {
     const url = new URL(request.url);
     
     // Configuration - You can modify these or use environment variables
-    const VIDEO_SOURCE_URL = decodeURIComponent(url.pathname.substring(1)) || 'https://g4f.dev/background/video_1.mp4';
+    const VIDEO_SOURCE_URL = decodeURIComponent(url.pathname.substring(1)) || 'https://totocraft.org/background/video_1.mp4';
     const CACHE_DURATION = 3600; // Cache for 1 hour
     
     // Handle CORS preflight requests

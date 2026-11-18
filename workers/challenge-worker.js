@@ -69,7 +69,7 @@
  *                           shared challenge KV is unavailable.
  *   TRANSLATIONS_SEED_URL — static seed directory with one `<lang>.json` per
  *                           language plus `index.json` (default:
- *                           https://g4f.dev/dist/js/translations). A language
+ *                           https://totocraft.org/dist/js/translations). A language
  *                           missing from both KVs is hydrated from the seed
  *                           and written to the translation store. Set to
  *                           "off" to disable.
@@ -90,9 +90,9 @@
  */
 
 const ALLOWED_ORIGINS = new Set([
-    "https://g4f.dev",
+    "https://totocraft.org",
     "https://g4f.space",
-    "https://www.g4f.dev",
+    "https://www.totocraft.org",
     "https://www.g4f.space",
     "http://localhost:8090",
     "http://localhost:8080",
@@ -305,7 +305,7 @@ async function loadSnippets(env) {
     const base = env.SNIPPETS_URL || "/dist/js/snippets/chat.json";
     const urls = base.startsWith("http")
         ? [base]
-        : SNIPPET_PAGES.map((path) => new URL(`/dist/js/snippets/${path}.json`, "https://g4f.dev").toString());
+        : SNIPPET_PAGES.map((path) => new URL(`/dist/js/snippets/${path}.json`, "https://totocraft.org").toString());
     const merged = {};
     for (const url of urls) {
         const res = await fetch(url, { cf: { cacheTtl: 3600, cacheEverything: true } });
@@ -594,7 +594,7 @@ function memoryCacheDelete(prefix) {
 /** Static seed directory with restored community translations. It is used
  *  when neither KV has a copy (e.g. after an Upstash plan-limit outage) and
  *  then written into the translation store so later reads hit Blob. */
-const DEFAULT_SEED_TRANSLATIONS_URL = "https://g4f.dev/dist/js/translations";
+const DEFAULT_SEED_TRANSLATIONS_URL = "https://totocraft.org/dist/js/translations";
 
 function seedTranslationsBase(env) {
     const value = env.TRANSLATIONS_SEED_URL;

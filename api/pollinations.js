@@ -5,7 +5,7 @@
 // platform-specific parts:
 //
 //   1. Restores the original request path. vercel.json rewrites the domain
-//      traffic (e.g. polli.g4f.dev/*) to this function at /api/pollinations
+//      traffic (e.g. polli.totocraft.org/*) to this function at /api/pollinations
 //      and passes the original path in the `path` query param. Direct hits
 //      under /api/pollinations/... are unwrapped too.
 //   2. Builds the worker `env` from Vercel environment variables.

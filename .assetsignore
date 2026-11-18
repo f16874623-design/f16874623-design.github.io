@@ -1,6 +1,6 @@
-# Cloudflare Workers static assets ignore list for the g4f.dev repository.
+# Cloudflare Workers static assets ignore list for the totocraft.org repository.
 #
-# g4f.dev is published as a static site by GitHub Pages, not as a Workers
+# totocraft.org is published as a static site by GitHub Pages, not as a Workers
 # assets bundle. The Workers in workers/ are code-only API endpoints. If a
 # Cloudflare build or a manual `wrangler deploy --assets .` treats this
 # repository as an assets directory, the VCS pack (>100 MiB) and the ffmpeg

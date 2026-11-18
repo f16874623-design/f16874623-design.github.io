@@ -60,15 +60,15 @@ in order:
 Set `FREEFLOW_BASE_URL` (or `base_url` in `dev-pipeline.json`) to point at a
 different proxy.
 
-## Enabling g4f.dev
+## Enabling totocraft.org
 
 The gpt4free checkout is configured as `gpt4free`; the website checkout is
-configured as `g4f.dev` at `../g4f.dev`. Missing projects are skipped, so the
+configured as `totocraft.org` at `../totocraft.org`. Missing projects are skipped, so the
 pipeline works with only one checkout.
 
 ```bash
-git clone --depth 1 https://github.com/gpt4free/g4f.dev.git ../g4f.dev
-bin/dev-pipeline init --project g4f.dev
+git clone --depth 1 https://github.com/gpt4free/totocraft.org.git ../totocraft.org
+bin/dev-pipeline init --project totocraft.org
 ```
 
 `init` creates an `AGENTS.md` in that checkout with a bootstrap task and the
@@ -78,8 +78,8 @@ same machine-readable state block. Add website-specific checks to
 ```json
 {
   "projects": {
-    "g4f.dev": {
-      "path": "../g4f.dev",
+    "totocraft.org": {
+      "path": "../totocraft.org",
       "checks": [["node", "scripts/check-js.mjs"]]
     }
   }
@@ -132,7 +132,7 @@ bin/dev-pipeline doctor
 
 # Create/update a PR from the current working tree
 bin/dev-pipeline pr
-bin/dev-pipeline pr --project g4f.dev
+bin/dev-pipeline pr --project totocraft.org
 
 # Push the current branch without creating or updating a PR
 bin/dev-pipeline push
@@ -147,7 +147,7 @@ back to the other configured remotes when one is not writable. Use
 `pr` creates `pipeline/pr-<timestamp>`, commits the working tree, pushes it to
 a GitHub remote, then creates or updates the PR with `gh`. By default it
 operates on the pipeline root checkout; use `--project <name>` to open the PR
-from another configured checkout such as `g4f.dev`. When the current branch is
+from another configured checkout such as `totocraft.org`. When the current branch is
 already a `pipeline/pr-*` branch, it commits and pushes that branch in place, so
 the existing PR is updated instead of a second PR being opened (a clean branch
 is allowed in that case). It tries `origin` first and falls back to another
@@ -282,7 +282,7 @@ models, then OVHcloud models as keyless fallbacks.
 
 | Key | Default | Meaning |
 | --- | --- | --- |
-| `projects` | gpt4free + g4f.dev | map of project name to `path`, `agents_file`, `checks`, `enabled` |
+| `projects` | gpt4free + totocraft.org | map of project name to `path`, `agents_file`, `checks`, `enabled` |
 | `preferred_models` | coding-first list | ranking hints for free models |
 | `disabled_models` | empty | models or aliases never probed or used (substring matching) |
 | `fallback_models` | `[]` | optional provider-qualified models tried after freeflow failures |
@@ -377,7 +377,7 @@ The run lock prevents overlapping invocations.
 | `pi-freeflow is not reachable` | Run `sandbox-cli start-freeflow-api`; check `~/.pi/agent/pi-freeflow.log` |
 | `all probed freeflow models failed` | Run `bin/dev-pipeline models --refresh`; free lanes may be rate-limited, retry later |
 | `no agent executable found` | Install Pi/OMP and `pi install npm:pi-freeflow` |
-| `project g4f.dev path does not exist` | Clone g4f.dev or remove/disable it in `dev-pipeline.json` |
+| `project totocraft.org path does not exist` | Clone totocraft.org or remove/disable it in `dev-pipeline.json` |
 | `baseline checks failed` | Fix the checkout, or run the check command directly and inspect the output |
 | `another dev-pipeline run holds ...` | Wait for the other run, or remove a stale `.dev-pipeline/run.lock` after confirming no process is active |
 | Task stuck `in-progress` | It is recovered after two hours, or edit the status to `pending` and run again |

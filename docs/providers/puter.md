@@ -51,7 +51,7 @@ print(response.choices[0].message.content)
 ### JavaScript (Browser Only)
 
 ```javascript
-import { Puter } from 'https://g4f.dev/dist/js/client.js';
+import { Puter } from 'https://totocraft.org/dist/js/client.js';
 
 // Browser environment only
 const client = new Puter();

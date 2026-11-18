@@ -1,13 +1,13 @@
 # AGENTS.md
 
-This file is the shared context file and status ledger for the **g4f.dev**
+This file is the shared context file and status ledger for the **totocraft.org**
 repository. Read it before changing code. The automatic development pipeline
 from the companion `gpt4free/gpt4free` checkout uses it as its task queue and
 run log.
 
 ## Project
 
-**g4f.dev** is the static website, documentation, playground, and browser
+**totocraft.org** is the static website, documentation, playground, and browser
 distribution for GPT4Free. It is deployed with GitHub Pages and includes the
 official JavaScript client under `dist/js/`.
 
@@ -54,7 +54,7 @@ git diff --check
 ```
 
 The pipeline should run `npm run check:js` plus `git diff --check` for changes
-in this repository. Configure that in the `g4f.dev` project entry of the
+in this repository. Configure that in the `totocraft.org` project entry of the
 `gpt4free` checkout's `dev-pipeline.json`.
 
 ## Development pipeline status
@@ -65,15 +65,15 @@ The blocks below are maintained automatically. Do not edit them by hand.
 ```json
 {
   "schema": 1,
-  "project": "g4f.dev",
+  "project": "totocraft.org",
   "updated": "2026-10-31T04:16:47Z",
   "tasks": [
     {
       "id": "G4FD-001",
-      "project": "g4f.dev",
+      "project": "totocraft.org",
       "priority": "P1",
       "status": "done",
-      "title": "Initialize the g4f.dev automatic development status",
+      "title": "Initialize the totocraft.org automatic development status",
       "acceptance": "AGENTS.md exists, is discoverable by agents, and bin/dev-pipeline status lists this task.",
       "created": "2026-10-31T04:16:47Z",
       "updated": "2026-10-31T04:16:47Z",
@@ -83,7 +83,7 @@ The blocks below are maintained automatically. Do not edit them by hand.
     },
     {
       "id": "G4FD-002",
-      "project": "g4f.dev",
+      "project": "totocraft.org",
       "priority": "P3",
       "status": "pending",
       "title": "Run existing JS smoke tests in GitHub Actions",
@@ -107,8 +107,8 @@ The blocks below are maintained automatically. Do not edit them by hand.
 
 | ID | Project | Priority | Status | Task | Acceptance | Updated |
 | --- | --- | --- | --- | --- | --- | --- |
-| G4FD-001 | g4f.dev | P1 | done | Initialize the g4f.dev automatic development status | AGENTS.md exists, is discoverable by agents, and bin/dev-pipeline status lists this task. | 2026-10-31T04:16:47Z |
-| G4FD-002 | g4f.dev | P3 | pending | Run existing JS smoke tests in GitHub Actions | static.yml runs the dist/js smoke tests (node --test) and the workflow passes. | 2026-10-31T04:16:47Z |
+| G4FD-001 | totocraft.org | P1 | done | Initialize the totocraft.org automatic development status | AGENTS.md exists, is discoverable by agents, and bin/dev-pipeline status lists this task. | 2026-10-31T04:16:47Z |
+| G4FD-002 | totocraft.org | P3 | pending | Run existing JS smoke tests in GitHub Actions | static.yml runs the dist/js smoke tests (node --test) and the workflow passes. | 2026-10-31T04:16:47Z |
 
 ### Free model health
 

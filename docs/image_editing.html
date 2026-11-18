@@ -13,18 +13,18 @@
     <meta property="og:type" content="article" />
     <meta property="og:title" content="GPT4Free Image Editing Variation Documentation | GPT4Free Documentation" />
     <meta property="og:description" content="GPT4Free documentation for GPT4Free Image Editing Variation Documentation. Free AI endpoints, examples, and comprehensive guides." />
-    <meta property="og:url" content="https://g4f.dev/docs/image_editing.html" />
+    <meta property="og:url" content="https://totocraft.org/docs/image_editing.html" />
     <meta property="og:site_name" content="GPT4Free Documentation" />
-    <meta property="og:image" content="https://g4f.dev/dist/img/g4f.svg" />
+    <meta property="og:image" content="https://totocraft.org/dist/img/g4f.svg" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="GPT4Free Image Editing Variation Documentation | GPT4Free Documentation" />
     <meta name="twitter:description" content="Free AI endpoints and comprehensive documentation for GPT4Free Image Editing Variation Documentation." />
-    <meta name="twitter:image" content="https://g4f.dev/dist/img/g4f.svg" />
+    <meta name="twitter:image" content="https://totocraft.org/dist/img/g4f.svg" />
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://g4f.dev/docs/image_editing.html" />
+    <link rel="canonical" href="https://totocraft.org/docs/image_editing.html" />
 
     <link rel="apple-touch-icon" sizes="180x180" href="/dist/img/g4f.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="/dist/img/g4f-32x32.png" />
@@ -376,24 +376,24 @@
       "@type": "TechArticle",
       "headline": "GPT4Free Image Editing Variation Documentation",
       "description": "Learn how to use GPT4Free's Image Editing Variation feature to generate image variations using multiple AI providers, with code examples and image results.",
-      "image": "https://g4f.dev/docs/images/strawberry.jpg",
+      "image": "https://totocraft.org/docs/images/strawberry.jpg",
       "author": {
         "@type": "Organization",
-        "@id": "https://g4f.dev/#organization",
+        "@id": "https://totocraft.org/#organization",
         "name": "GPT4Free",
-        "url": "https://g4f.dev",
+        "url": "https://totocraft.org",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://g4f.dev/dist/img/g4f.svg"
+          "url": "https://totocraft.org/dist/img/g4f.svg"
         }
       },
       "publisher": {
         "@type": "Organization",
-        "@id": "https://g4f.dev/#organization"
+        "@id": "https://totocraft.org/#organization"
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://g4f.dev/docs/image_editing.html"
+        "@id": "https://totocraft.org/docs/image_editing.html"
       },
       "datePublished": "2024-01-01T00:00:00Z",
       "dateModified": "2024-01-01T00:00:00Z",
@@ -423,7 +423,7 @@
 
         <main role="main" class="markdown-body entry-content" itemprop="text" itemscope itemtype="https://schema.org/TechArticle">
 <h2>GPT4Free Image Editing Variation Documentation</h2>
-<p>This guide explains how to use the image editing variation feature in <strong>GPT4Free (g4f.dev)</strong>. It covers generating variations of images using different providers, handling local file uploads, and showcasing example results.</p>
+<p>This guide explains how to use the image editing variation feature in <strong>GPT4Free (totocraft.org)</strong>. It covers generating variations of images using different providers, handling local file uploads, and showcasing example results.</p>
 <hr>
 <h2>Table of Contents</h2>
 <ol>
@@ -596,7 +596,7 @@
 
 <span class="pl-k">async</span> <span class="pl-k">def</span> <span class="pl-en">main_with_openai</span>():
     <span class="pl-s1">result</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-s1">client</span>.<span class="pl-c1">images</span>.<span class="pl-c1">create_variation</span>(
-        <span class="pl-s1">image</span><span class="pl-c1">=</span><span class="pl-en">Path</span>(<span class="pl-s">"g4f.dev/docs/images/strawberry.jpg"</span>),
+        <span class="pl-s1">image</span><span class="pl-c1">=</span><span class="pl-en">Path</span>(<span class="pl-s">"totocraft.org/docs/images/strawberry.jpg"</span>),
         <span class="pl-s1">provider</span><span class="pl-c1">=</span><span class="pl-v">OpenaiAccount</span>,
         <span class="pl-s1">prompt</span><span class="pl-c1">=</span><span class="pl-s">"Change food color to green"</span>,
         <span class="pl-s1">response_format</span><span class="pl-c1">=</span><span class="pl-s">"url"</span>
@@ -605,7 +605,7 @@
 
 <span class="pl-k">async</span> <span class="pl-k">def</span> <span class="pl-en">main_with_copilot</span>():
     <span class="pl-s1">result</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-s1">client</span>.<span class="pl-c1">images</span>.<span class="pl-c1">create_variation</span>(
-        <span class="pl-s1">image</span><span class="pl-c1">=</span><span class="pl-en">Path</span>(<span class="pl-s">"g4f.dev/docs/images/strawberry.jpg"</span>),
+        <span class="pl-s1">image</span><span class="pl-c1">=</span><span class="pl-en">Path</span>(<span class="pl-s">"totocraft.org/docs/images/strawberry.jpg"</span>),
         <span class="pl-s1">provider</span><span class="pl-c1">=</span><span class="pl-v">CopilotAccount</span>,
         <span class="pl-s1">prompt</span><span class="pl-c1">=</span><span class="pl-s">"Generate a variant of this image"</span>,
         <span class="pl-s1">response_format</span><span class="pl-c1">=</span><span class="pl-s">"url"</span>
@@ -627,7 +627,7 @@
 
 <span class="pl-k">async</span> <span class="pl-k">def</span> <span class="pl-en">main_with_hugging_space</span>():
     <span class="pl-s1">result</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-s1">client</span>.<span class="pl-c1">images</span>.<span class="pl-c1">create_variation</span>(
-        <span class="pl-s1">image</span><span class="pl-c1">=</span><span class="pl-en">Path</span>(<span class="pl-s">"g4f.dev/docs/images/strawberry.jpg"</span>),
+        <span class="pl-s1">image</span><span class="pl-c1">=</span><span class="pl-en">Path</span>(<span class="pl-s">"totocraft.org/docs/images/strawberry.jpg"</span>),
         <span class="pl-s1">provider</span><span class="pl-c1">=</span><span class="pl-v">HuggingSpace</span>,
         <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s">"flux-kontext-dev"</span>,
         <span class="pl-s1">prompt</span><span class="pl-c1">=</span><span class="pl-s">"Change color to black and white"</span>,
@@ -637,7 +637,7 @@
 
 <span class="pl-k">async</span> <span class="pl-k">def</span> <span class="pl-en">main_with_azure</span>():
     <span class="pl-s1">result</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-s1">client</span>.<span class="pl-c1">images</span>.<span class="pl-c1">create_variation</span>(
-        <span class="pl-s1">image</span><span class="pl-c1">=</span><span class="pl-en">Path</span>(<span class="pl-s">"g4f.dev/docs/images/strawberry.jpg"</span>),
+        <span class="pl-s1">image</span><span class="pl-c1">=</span><span class="pl-en">Path</span>(<span class="pl-s">"totocraft.org/docs/images/strawberry.jpg"</span>),
         <span class="pl-s1">provider</span><span class="pl-c1">=</span><span class="pl-v">Azure</span>,
         <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s">"flux-kontext"</span>,
         <span class="pl-s1">prompt</span><span class="pl-c1">=</span><span class="pl-s">"Add text 'Hello World' in the center"</span>,
@@ -655,7 +655,7 @@
 
 <span class="pl-k">async</span> <span class="pl-k">def</span> <span class="pl-en">main_pollinations</span>():
     <span class="pl-s1">result</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-s1">client</span>.<span class="pl-c1">images</span>.<span class="pl-c1">create_variation</span>(
-        <span class="pl-s1">image</span><span class="pl-c1">=</span><span class="pl-s">"https://g4f.dev/docs/images/strawberry.jpg"</span>,
+        <span class="pl-s1">image</span><span class="pl-c1">=</span><span class="pl-s">"https://totocraft.org/docs/images/strawberry.jpg"</span>,
         <span class="pl-s1">provider</span><span class="pl-c1">=</span><span class="pl-v">PollinationsAI</span>,
         <span class="pl-s1">prompt</span><span class="pl-c1">=</span><span class="pl-s">"Remove background"</span>,
         <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s">"kontext"</span>,
@@ -665,7 +665,7 @@
 
 <span class="pl-k">async</span> <span class="pl-k">def</span> <span class="pl-en">main_with_together</span>():
     <span class="pl-s1">result</span> <span class="pl-c1">=</span> <span class="pl-k">await</span> <span class="pl-s1">client</span>.<span class="pl-c1">images</span>.<span class="pl-c1">create_variation</span>(
-        <span class="pl-s1">image</span><span class="pl-c1">=</span><span class="pl-s">"https://g4f.dev/docs/images/strawberry.jpg"</span>,
+        <span class="pl-s1">image</span><span class="pl-c1">=</span><span class="pl-s">"https://totocraft.org/docs/images/strawberry.jpg"</span>,
         <span class="pl-s1">provider</span><span class="pl-c1">=</span><span class="pl-v">Together</span>,
         <span class="pl-s1">model</span><span class="pl-c1">=</span><span class="pl-s">"flux-kontext-pro"</span>,
         <span class="pl-s1">prompt</span><span class="pl-c1">=</span><span class="pl-s">"Add nature background"</span>,

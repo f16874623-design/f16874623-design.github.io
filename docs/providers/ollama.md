@@ -52,7 +52,7 @@ print(response.choices[0].message.content)
 ### JavaScript (Remote Models)
 
 ```javascript
-import { Client } from '@gpt4free/g4f.dev';
+import { Client } from '@gpt4free/totocraft.org';
 
 const client = new Client({ baseUrl: 'https://g4f.space/api/ollama'});
 

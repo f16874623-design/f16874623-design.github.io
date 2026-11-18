@@ -52,7 +52,7 @@ async function loadProviders() {
     let data;
     if (typeof window !== "undefined" && window.fetch) {
         // Web: fetch providers.json
-        let origin = "https://g4f.dev";
+        let origin = "https://totocraft.org";
         if (["localhost", "gpt4free.github.io", "0.0.0.0"].includes(window.location.hostname)) {
             origin = "";
         }

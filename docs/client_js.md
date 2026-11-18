@@ -19,14 +19,14 @@ This JavaScript library provides a flexible interface to interact with **multipl
 
 ```html
 <script type="module">
-  import { Client, Pollinations, Puter, HuggingFace } from 'https://g4f.dev/dist/js/client.js';
+  import { Client, Pollinations, Puter, HuggingFace } from 'https://totocraft.org/dist/js/client.js';
 </script>
 ```
 
 ### NPM
 
 ```bash
-npm install @gpt4free/g4f.dev
+npm install @gpt4free/totocraft.org
 ```
 
 ---
@@ -36,7 +36,7 @@ npm install @gpt4free/g4f.dev
 You can initialize a client using one of the following providers:
 
 ```js
-import { Client, PollinationsAI, Puter, HuggingFace } from '@gpt4free/g4f.dev';
+import { Client, PollinationsAI, Puter, HuggingFace } from '@gpt4free/totocraft.org';
 
 // Pollinations
 const client = new PollinationsAI({ apiKey: 'optional' });
@@ -66,7 +66,7 @@ All clients conform to the same method interfaces for completions, models, and i
 
 The `Kilo` API does not send CORS headers, so requests are routed
 through a CORS proxy (`https://proxy.corsfix.com/?`) by default. corsfix is free
-for `localhost` — for production on `g4f.dev` a free [corsfix](https://corsfix.com)
+for `localhost` — for production on `totocraft.org` a free [corsfix](https://corsfix.com)
 registration for your domain is required. You can customize or disable proxying:
 
 ```js
@@ -159,7 +159,7 @@ models.forEach(m => console.log(m.id, m.type));
 You can also iterate through every available provider and fetch their supported models in one go:
 
 ```js
-import { loadProviders, createClient } from '@gpt4free/g4f.dev/providers';
+import { loadProviders, createClient } from '@gpt4free/totocraft.org/providers';
 
 const providers = await loadProviders();
 

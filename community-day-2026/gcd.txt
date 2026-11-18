@@ -1,6 +1,6 @@
 # 🌐 GPT4Free Community Day: The Plan
 **Date:** Friday, 10 July 2026
-**Milestones:** 3 Years GPT4Free | 1 Year g4f.dev
+**Milestones:** 3 Years GPT4Free | 1 Year totocraft.org
 
 ## Part 1: How We Connect (Platforms & Tools)
 Before the schedule begins, you need the right setup to ensure a two-way connection, rather than just a one-way broadcast.
@@ -24,7 +24,7 @@ Before the schedule begins, you need the right setup to ensure a two-way connect
     *   Heiner welcomes everyone. 
     *   *Interactive moment:* "Let’s see where the g4f family is right now!" Drop a Mentimeter link in chat. Users enter their Country/State, and a live Word Cloud or World Map populates on the presentation slides.
 *   **18:10 - Celebrating the Milestones:**
-    *   Slide: **3 Years of GPT4Free & 1 Year of g4f.dev**
+    *   Slide: **3 Years of GPT4Free & 1 Year of totocraft.org**
     *   Slide: **GPT4Free by the Numbers:** Show current stats (GitHub Stars, total contributors, pull requests, number of active users/requests).
 *   **18:15 - The Big Update: Introducing Version 7.7.7:**
     *   Slide presentation detailing the massive new features:

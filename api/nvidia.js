@@ -5,7 +5,7 @@
 // platform-specific parts:
 //
 //   1. Restores the original request path. vercel.json rewrites the domain
-//      traffic (nvidea.g4f.dev/*) to this function at /api/nvidia and passes
+//      traffic (nvidea.totocraft.org/*) to this function at /api/nvidia and passes
 //      the original path in the `path` query param. Direct hits under
 //      /api/nvidia/... are unwrapped too.
 //   2. Builds the worker `env` from Vercel environment variables.

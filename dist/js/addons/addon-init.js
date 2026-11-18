@@ -1356,14 +1356,14 @@ try {
 }
 
 function isMcpG4fHost() {
-    return window.location.hostname === 'g4f.dev'
-        || window.location.hostname.endsWith('.g4f.dev');
+    return window.location.hostname === 'totocraft.org'
+        || window.location.hostname.endsWith('.totocraft.org');
 }
 
 /**
  * Resolve the MCP endpoint that belongs to the current backend.
  *
- * The domain g4f.dev keeps using the shared MCP service. Every other origin
+ * The domain totocraft.org keeps using the shared MCP service. Every other origin
  * (a self-hosted G4F instance) serves MCP itself, so the local backend must be
  * used even if backend detection has not finished yet. Using the remote
  * service as a fallback here makes self-hosted installs silently lose their

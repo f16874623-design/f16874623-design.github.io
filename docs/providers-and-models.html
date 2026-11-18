@@ -13,18 +13,18 @@
     <meta property="og:type" content="article" />
     <meta property="og:title" content="G4F - Providers and Models | GPT4Free Documentation" />
     <meta property="og:description" content="GPT4Free documentation for G4F - Providers and Models. Free AI endpoints, examples, and comprehensive guides." />
-    <meta property="og:url" content="https://g4f.dev/docs/providers-and-models.html" />
+    <meta property="og:url" content="https://totocraft.org/docs/providers-and-models.html" />
     <meta property="og:site_name" content="GPT4Free Documentation" />
-    <meta property="og:image" content="https://g4f.dev/dist/img/g4f.svg" />
+    <meta property="og:image" content="https://totocraft.org/dist/img/g4f.svg" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="G4F - Providers and Models | GPT4Free Documentation" />
     <meta name="twitter:description" content="Free AI endpoints and comprehensive documentation for G4F - Providers and Models." />
-    <meta name="twitter:image" content="https://g4f.dev/dist/img/g4f.svg" />
+    <meta name="twitter:image" content="https://totocraft.org/dist/img/g4f.svg" />
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://g4f.dev/docs/providers-and-models.html" />
+    <link rel="canonical" href="https://totocraft.org/docs/providers-and-models.html" />
 
     <link rel="apple-touch-icon" sizes="180x180" href="/dist/img/g4f.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="/dist/img/g4f-32x32.png" />
@@ -310,7 +310,7 @@ print(response.choices[0].message.content)</code></pre>
             </div>
             <div id="code-javascript" class="code-content">
                 <button class="copy-btn" onclick="copyCode('javascript')">Copy</button>
-<pre><code id="code-javascript-content" class="language-javascript">import { createClient } from 'https://g4f.dev/dist/js/providers.js';
+<pre><code id="code-javascript-content" class="language-javascript">import { createClient } from 'https://totocraft.org/dist/js/providers.js';
 
 const client = createClient('default');
 const result = await client.chat.completions.create({
@@ -340,7 +340,7 @@ console.log(result.choices[0].message.content);</code></pre>
                 <button class="expand-btn" onclick="toggleExample('js-client-example')">Show JS Client Example</button>
                 <div class="example-content" id="js-client-example">
 <pre><code class="language-javascript">
-import { createClient } from 'https://g4f.dev/dist/js/providers.js';
+import { createClient } from 'https://totocraft.org/dist/js/providers.js';
 
 const client = createClient("default");
 const result = await client.chat.completions.create({
@@ -411,7 +411,7 @@ print(response)
 <button class="expand-btn" onclick="toggleExample('js-clientfactory-example')">Show JS ClientFactory Example</button>
 <div class="example-content" id="js-clientfactory-example">
     <pre><code class="language-javascript">
-import { createClient } from 'https://g4f.dev/dist/js/providers.js';
+import { createClient } from 'https://totocraft.org/dist/js/providers.js';
 
 const client = createClient("custom:srv_mjlq1ncq8a3f7fe0aea0");
 const result = await client.chat.completions.create({
@@ -445,7 +445,7 @@ print(response)
     </div>
 
     <script type="module">
-        import { loadProviders, createClient } from 'https://g4f.dev/dist/js/providers.js';
+        import { loadProviders, createClient } from 'https://totocraft.org/dist/js/providers.js';
 
         // Global state for selector
         window.selectorProviders = {};
@@ -1046,7 +1046,7 @@ print(response.choices[0].message.content)`;
             // JavaScript code
             let jsCode;
             if (provider && provider !== 'default') {
-                jsCode = `import { createClient } from 'https://g4f.dev/dist/js/providers.js';
+                jsCode = `import { createClient } from 'https://totocraft.org/dist/js/providers.js';
 
 const client = createClient("${displayProvider}");
 const result = await client.chat.completions.create({
@@ -1055,7 +1055,7 @@ const result = await client.chat.completions.create({
 });
 console.log(result.choices[0].message.content);`;
             } else {
-                jsCode = `import { createClient } from 'https://g4f.dev/dist/js/providers.js';
+                jsCode = `import { createClient } from 'https://totocraft.org/dist/js/providers.js';
 
 const client = createClient("default");
 const result = await client.chat.completions.create({
